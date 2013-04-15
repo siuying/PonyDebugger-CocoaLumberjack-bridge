@@ -7,6 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "DDLog.h"
+
+static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 @interface ViewController ()
 
@@ -17,13 +20,23 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    DDLogInfo(@"loaded!");
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    
+    NSTimer* timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(test) userInfo:nil repeats:YES];
+    [timer fire];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void) test {
+    DDLogInfo(@"Hello world (%@)", [NSDate date]);
 }
 
 @end

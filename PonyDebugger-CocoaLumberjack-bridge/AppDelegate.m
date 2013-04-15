@@ -7,13 +7,30 @@
 //
 
 #import "AppDelegate.h"
-
 #import "ViewController.h"
+
+#import "PDDebugger.h"
+
+#import "DDLog.h"
+#import "DDASLLogger.h"
+#import "DDTTYLogger.h"
+#import "PDCLogger.h"
+
+static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    PDDebugger *debugger = [PDDebugger defaultInstance];
+    [debugger autoConnect];
+    [debugger enableRemoteLogging];
+
+    [DDLog addLogger:[PDCLogger sharedInstance]];
+    [DDLog addLogger:[DDASLLogger sharedInstance]];
+    [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    DDLogInfo(@"Logger configured");
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];

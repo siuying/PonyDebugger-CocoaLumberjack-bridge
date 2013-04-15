@@ -23,6 +23,8 @@
 		54D35483171BFA2000027B98 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54D3545E171BFA2000027B98 /* Foundation.framework */; };
 		54D3548B171BFA2000027B98 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54D35489171BFA2000027B98 /* InfoPlist.strings */; };
 		54D3548E171BFA2000027B98 /* PonyDebugger_CocoaLumberjack_bridgeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D3548D171BFA2000027B98 /* PonyDebugger_CocoaLumberjack_bridgeTests.m */; };
+		54D3549A171BFB0500027B98 /* PDCLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D35499171BFB0500027B98 /* PDCLogger.m */; };
+		EE5398D262D6401EB4560A05 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DEE2B5CD2854264B63ACC7B /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,10 @@
 		54D3548A171BFA2000027B98 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		54D3548C171BFA2000027B98 /* PonyDebugger_CocoaLumberjack_bridgeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PonyDebugger_CocoaLumberjack_bridgeTests.h; sourceTree = "<group>"; };
 		54D3548D171BFA2000027B98 /* PonyDebugger_CocoaLumberjack_bridgeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PonyDebugger_CocoaLumberjack_bridgeTests.m; sourceTree = "<group>"; };
+		54D35498171BFB0500027B98 /* PDCLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDCLogger.h; path = Logger/PDCLogger.h; sourceTree = "<group>"; };
+		54D35499171BFB0500027B98 /* PDCLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDCLogger.m; path = Logger/PDCLogger.m; sourceTree = "<group>"; };
+		6DEE2B5CD2854264B63ACC7B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB926906DAAF4F8EB0393A1A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,7 @@
 				54D3545D171BFA2000027B98 /* UIKit.framework in Frameworks */,
 				54D3545F171BFA2000027B98 /* Foundation.framework in Frameworks */,
 				54D35461171BFA2000027B98 /* CoreGraphics.framework in Frameworks */,
+				EE5398D262D6401EB4560A05 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +98,7 @@
 				54D35486171BFA2000027B98 /* PonyDebugger-CocoaLumberjack-bridgeTests */,
 				54D3545B171BFA2000027B98 /* Frameworks */,
 				54D3545A171BFA2000027B98 /* Products */,
+				CB926906DAAF4F8EB0393A1A /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +118,7 @@
 				54D3545E171BFA2000027B98 /* Foundation.framework */,
 				54D35460171BFA2000027B98 /* CoreGraphics.framework */,
 				54D35480171BFA2000027B98 /* SenTestingKit.framework */,
+				6DEE2B5CD2854264B63ACC7B /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -117,6 +126,7 @@
 		54D35462171BFA2000027B98 /* PonyDebugger-CocoaLumberjack-bridge */ = {
 			isa = PBXGroup;
 			children = (
+				54D35497171BFAC100027B98 /* Logger */,
 				54D3546B171BFA2000027B98 /* AppDelegate.h */,
 				54D3546C171BFA2000027B98 /* AppDelegate.m */,
 				54D35474171BFA2000027B98 /* ViewController.h */,
@@ -160,6 +170,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		54D35497171BFAC100027B98 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				54D35498171BFB0500027B98 /* PDCLogger.h */,
+				54D35499171BFB0500027B98 /* PDCLogger.m */,
+			);
+			name = Logger;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,9 +186,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 54D35491171BFA2000027B98 /* Build configuration list for PBXNativeTarget "PonyDebugger-CocoaLumberjack-bridge" */;
 			buildPhases = (
+				A8AD802FA69D435AAFB32792 /* Check Pods Manifest.lock */,
 				54D35455171BFA2000027B98 /* Sources */,
 				54D35456171BFA2000027B98 /* Frameworks */,
 				54D35457171BFA2000027B98 /* Resources */,
+				D4A0735FEE864A039FA8D860 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -263,6 +284,34 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		A8AD802FA69D435AAFB32792 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sanbox is not in sync with the Podfile.lock. Run 'pod install'.\nEOM\n    exit 1\nfi\n";
+		};
+		D4A0735FEE864A039FA8D860 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -273,6 +322,7 @@
 				54D35469171BFA2000027B98 /* main.m in Sources */,
 				54D3546D171BFA2000027B98 /* AppDelegate.m in Sources */,
 				54D35476171BFA2000027B98 /* ViewController.m in Sources */,
+				54D3549A171BFB0500027B98 /* PDCLogger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,6 +430,7 @@
 		};
 		54D35492171BFA2000027B98 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB926906DAAF4F8EB0393A1A /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PonyDebugger-CocoaLumberjack-bridge/PonyDebugger-CocoaLumberjack-bridge-Prefix.pch";
@@ -391,6 +442,7 @@
 		};
 		54D35493171BFA2000027B98 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB926906DAAF4F8EB0393A1A /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PonyDebugger-CocoaLumberjack-bridge/PonyDebugger-CocoaLumberjack-bridge-Prefix.pch";
@@ -453,6 +505,7 @@
 				54D35493171BFA2000027B98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		54D35494171BFA2000027B98 /* Build configuration list for PBXNativeTarget "PonyDebugger-CocoaLumberjack-bridgeTests" */ = {
 			isa = XCConfigurationList;
@@ -461,6 +514,7 @@
 				54D35496171BFA2000027B98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
