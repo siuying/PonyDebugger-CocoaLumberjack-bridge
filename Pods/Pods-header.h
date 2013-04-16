@@ -2,5 +2,6 @@
 #define __COCOA_PODS
 
 #define __POD_CocoaLumberjack
+#define __POD_JRSwizzle
 #define __POD_PonyDebugger
 #define __POD_SocketRocket

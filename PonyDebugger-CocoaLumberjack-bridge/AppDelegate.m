@@ -14,7 +14,8 @@
 #import "DDLog.h"
 #import "DDASLLogger.h"
 #import "DDTTYLogger.h"
-#import "PDCLogger.h"
+
+#import "DDLog+PonyDebuggerBridge.h"
 
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
@@ -26,7 +27,6 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
     [debugger autoConnect];
     [debugger enableRemoteLogging];
 
-    [DDLog addLogger:[PDCLogger sharedInstance]];
     [DDLog addLogger:[DDASLLogger sharedInstance]];
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
     DDLogInfo(@"Logger configured");

@@ -23,7 +23,7 @@
 		54D35483171BFA2000027B98 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54D3545E171BFA2000027B98 /* Foundation.framework */; };
 		54D3548B171BFA2000027B98 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 54D35489171BFA2000027B98 /* InfoPlist.strings */; };
 		54D3548E171BFA2000027B98 /* PonyDebugger_CocoaLumberjack_bridgeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D3548D171BFA2000027B98 /* PonyDebugger_CocoaLumberjack_bridgeTests.m */; };
-		54D3549A171BFB0500027B98 /* PDCLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D35499171BFB0500027B98 /* PDCLogger.m */; };
+		54F4478B171CF34A009258A7 /* DDLog+PonyDebuggerBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F4478A171CF34A009258A7 /* DDLog+PonyDebuggerBridge.m */; };
 		EE5398D262D6401EB4560A05 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DEE2B5CD2854264B63ACC7B /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -60,8 +60,8 @@
 		54D3548A171BFA2000027B98 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		54D3548C171BFA2000027B98 /* PonyDebugger_CocoaLumberjack_bridgeTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PonyDebugger_CocoaLumberjack_bridgeTests.h; sourceTree = "<group>"; };
 		54D3548D171BFA2000027B98 /* PonyDebugger_CocoaLumberjack_bridgeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PonyDebugger_CocoaLumberjack_bridgeTests.m; sourceTree = "<group>"; };
-		54D35498171BFB0500027B98 /* PDCLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PDCLogger.h; path = Logger/PDCLogger.h; sourceTree = "<group>"; };
-		54D35499171BFB0500027B98 /* PDCLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PDCLogger.m; path = Logger/PDCLogger.m; sourceTree = "<group>"; };
+		54F44789171CF34A009258A7 /* DDLog+PonyDebuggerBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "DDLog+PonyDebuggerBridge.h"; path = "Logger/DDLog+PonyDebuggerBridge.h"; sourceTree = "<group>"; };
+		54F4478A171CF34A009258A7 /* DDLog+PonyDebuggerBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "DDLog+PonyDebuggerBridge.m"; path = "Logger/DDLog+PonyDebuggerBridge.m"; sourceTree = "<group>"; };
 		6DEE2B5CD2854264B63ACC7B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB926906DAAF4F8EB0393A1A /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -173,8 +173,8 @@
 		54D35497171BFAC100027B98 /* Logger */ = {
 			isa = PBXGroup;
 			children = (
-				54D35498171BFB0500027B98 /* PDCLogger.h */,
-				54D35499171BFB0500027B98 /* PDCLogger.m */,
+				54F44789171CF34A009258A7 /* DDLog+PonyDebuggerBridge.h */,
+				54F4478A171CF34A009258A7 /* DDLog+PonyDebuggerBridge.m */,
 			);
 			name = Logger;
 			sourceTree = "<group>";
@@ -322,7 +322,7 @@
 				54D35469171BFA2000027B98 /* main.m in Sources */,
 				54D3546D171BFA2000027B98 /* AppDelegate.m in Sources */,
 				54D35476171BFA2000027B98 /* ViewController.m in Sources */,
-				54D3549A171BFB0500027B98 /* PDCLogger.m in Sources */,
+				54F4478B171CF34A009258A7 /* DDLog+PonyDebuggerBridge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

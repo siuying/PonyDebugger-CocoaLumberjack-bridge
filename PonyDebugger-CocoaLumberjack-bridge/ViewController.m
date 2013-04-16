@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "DDLog.h"
+#import "PDDebugger.h"
 
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
@@ -21,7 +22,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 {
     [super viewDidLoad];
     
-    DDLogInfo(@"loaded!");
+    DDLogInfo(@"loaded! 100%%");
 	// Do any additional setup after loading the view, typically from a nib.
     
     
@@ -36,7 +37,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 }
 
 -(void) test {
-    DDLogInfo(@"Hello world (%@)", [NSDate date]);
+    DDLogInfo(@"Hello world: %@ %@", [NSDate date], [UIApplication sharedApplication]);
 }
 
 @end
