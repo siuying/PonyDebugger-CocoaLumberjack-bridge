@@ -8,7 +8,7 @@ PonyDebugger is a remote debugging toolset.
 It is a client library and gateway server combination that uses Chrome Developer Tools on your browser to debug your application's network traffic and managed object contexts.
 DESC
   s.author = 'Square'
-  s.source = { :git => 'https://github.com/wlue/PonyDebugger.git', :commit => 'ed40b8df2bd13b3a86c62b8a4c9d09e7cf8d6cae' }
+  s.source = { :git => 'https://github.com/siuying/PonyDebugger.git', :commit => 'a86a467' }
   s.license = 'Apache Licence, Version 2.0'
 
   # Platform setup
