@@ -17,10 +17,16 @@ PonyDebugger is licensed under the Apache Licence, Version 2.0
 Changes
 -------
 
+### v0.3.0 - 2013-05-01
+
+ - Remote Logging and Introspection (@wlue)
+ - Request response pretty printing in Network Debugger (@davidapgar)
+ - Minor bug fixes and improvements. (@jerryhjones, @conradev, @ryanolsonk)
+
 ### v0.2.1-beta1 - 2013-01-12
 
-- Bonjour support (Thanks @jeanregisser!)
-- Memory leak fix (Thanks @rwickliffe!)
+ - Bonjour support (@jeanregisser)
+ - Memory leak fix (@rwickliffe)
 
 Features
 --------
@@ -84,7 +90,7 @@ PonyDebugger lets you remotely log text and object dumps via the `PDLog` and
 `PDLogObjects` function. This lets you reduce the amount of content being
 loggedin `NSLog`, while also allowing you dynamically introspect objects.
 
-![PonyDebugger Remote Loggin Screenshot](https://github.com/square/PonyDebugger/raw/master/Documentation/Images/RemoteLogging.png)
+![PonyDebugger Remote Login Screenshot](https://github.com/square/PonyDebugger/raw/master/Documentation/Images/RemoteLogging.png)
 
 Introspected objects can be expanded recursively by property. This means that
 you don't have to breakpoint and log in GDB or LLDB to introspect an object.
@@ -317,4 +323,5 @@ Some useful links:
 
 - [Chrome Remote Debugging Documentation](https://developers.google.com/chrome-developer-tools/docs/protocol/tot/index)
 - [WebKit Inspector Protocol Definition on GitHub](https://github.com/WebKit/webkit/blob/master/Source/WebCore/inspector/Inspector.json)
+
 

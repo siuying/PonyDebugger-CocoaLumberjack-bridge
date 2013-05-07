@@ -1,23 +1,19 @@
 PODS:
   - CocoaLumberjack (1.6.2)
   - JRSwizzle (1.0)
-  - PonyDebugger (0.2.1beta1):
+  - PonyDebugger (0.3.0):
     - SocketRocket
   - SocketRocket (0.2.0)
 
 DEPENDENCIES:
   - CocoaLumberjack
   - JRSwizzle (~> 1.0)
-  - PonyDebugger (from `PonyDebugger.podspec`)
-
-EXTERNAL SOURCES:
-  PonyDebugger:
-    :podspec: PonyDebugger.podspec
+  - PonyDebugger (= 0.3.0)
 
 SPEC CHECKSUMS:
   CocoaLumberjack: d73e1e317ced14ab930797dda6c17156ff17aaa1
   JRSwizzle: 6242ff38485d870fc2636899048ee1ab883ae587
-  PonyDebugger: f83752a797d00eec02c756ef4d422b8a359c5011
+  PonyDebugger: 72c2277c30f247390116ae328fe24082e0ed558e
   SocketRocket: bca43a94bd9aac3a629df42c06843402399ee67b
 
 COCOAPODS: 0.18.1

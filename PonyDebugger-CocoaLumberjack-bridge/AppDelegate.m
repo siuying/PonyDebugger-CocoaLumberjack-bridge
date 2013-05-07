@@ -24,8 +24,9 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     PDDebugger *debugger = [PDDebugger defaultInstance];
-    [debugger autoConnect];
+    [debugger connectToURL:[NSURL URLWithString:@"ws://127.0.0.1:9000/device"]];
     [debugger enableRemoteLogging];
+    [debugger enableViewHierarchyDebugging];
 
     [DDLog addLogger:[DDASLLogger sharedInstance]];
     [DDLog addLogger:[DDTTYLogger sharedInstance]];

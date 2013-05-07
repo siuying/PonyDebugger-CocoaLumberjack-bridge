@@ -18,13 +18,13 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
 @implementation ViewController
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     DDLogInfo(@"loaded! 100%%");
 	// Do any additional setup after loading the view, typically from a nib.
-    
     
     NSTimer* timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(test) userInfo:nil repeats:YES];
     [timer fire];
@@ -37,7 +37,7 @@ static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 }
 
 -(void) test {
-    DDLogInfo(@"Hello world: %@ %@", [NSDate date], [UIApplication sharedApplication]);
+    DDLogInfo(@"Hello world: %@ %@", [NSDate date], [self view]);
 }
 
 @end
